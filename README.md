@@ -48,3 +48,14 @@ dns-nameservers 8.8.8.8 8.8.4.4
 Guarda los cambios y reinicia la interfaz de red con:
 
 sudo systemctl restart networking
+
+# INSTALL WEBMIN
+wget https://raw.githubusercontent.com/webmin/webmin/master/setup-repos.sh
+sudo sh setup-repos.sh 
+sudo apt-get install --install-recommends webmin
+
+
+# INSTALL PLEX MEDIA SERVER
+wget https://downloads.plex.tv/plex-media-server-new/1.32.6.7557-1cf77d501/debian/plexmediaserver_1.32.6.7557-1cf77d501_amd64.deb
+sudo dpkg -i plexmediaserver_1.32.6.7557-1cf77d501_amd64.deb 
+sudo systemctl status plexmediaserver
